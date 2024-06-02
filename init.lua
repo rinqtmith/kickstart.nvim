@@ -581,6 +581,7 @@ require('lazy').setup({
 
         zls = {},
         bashls = {},
+        tsserver = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -613,6 +614,8 @@ require('lazy').setup({
         'codelldb',
         'shellcheck',
         'shfmt',
+        'eslint_d',
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -664,7 +667,11 @@ require('lazy').setup({
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+        javascript = { 'prettier' },
+        javascriptreact = { 'prettier' },
+        typescript = { 'prettier' },
+        typescriptreact = { 'prettier' },
+        tsx = { 'prettier' },
       },
     },
   },
